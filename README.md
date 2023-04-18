@@ -14,9 +14,9 @@
 
 # Introdução
 
-# Descrição do problema
+# Descrição do Problema
 
-# Solução proposta
+# Solução Proposta
 
 # Casos Especiais
 
