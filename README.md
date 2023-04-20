@@ -69,7 +69,13 @@ Dito esses assuntos, vale ressaltar as onze funções declaradas no arquivo Matr
 - ```VerTrajetoria``` : Função que mostra o arquivo ".gm" que possui todas as posições de todas as matrizes nas quais o "hunter" passou.
 
 Com a interconexão de todas essas funções, o caminhamento do jogador por todas as matrizes se torna possível e real.
-
+<div align=center>
+<img src="https://user-images.githubusercontent.com/127882640/233478607-25dfe6bc-de75-4af7-85ce-29de3e1c73c1.png" width="850px">
+</div>
+<p  align="center">
+Exemplo de caminhamento envolvendo duas matrizes quadradas (3x3). As setas verdes indicam as posições possíveis de serem acessadas, as vermelhas indicam as não possíveis, os círculos amarelos "P" indicam a localização dos portais. Junto a eles, existem as setas amarelas, as quais indicam para onde os portais levam o "hunter". Vale ressaltar que toda seta verde é dupla, ou seja, possível de ida e volta. Além disso, o caracter "P" dos portais pode assumir a identidade que qualquer caracter comum da matriz, seja um número natural de 0 a 9 (itens), seja uma parade (#), seja um perigo (*).
+</p>
+ 
 # Casos Especiais
 
 # Implementação
@@ -77,3 +83,12 @@ Com a interconexão de todas essas funções, o caminhamento do jogador por toda
 # Conclusão 
 
 # Compilação e Execução
+
+Um arquivo Makefile que realiza todo o procedimento de compilação e execução está disponível no código. Para utilizá-lo, siga as diretrizes de execução no terminal:
+
+
+| Comando                |  Função                                                                                           |                     
+| -----------------------| ------------------------------------------------------------------------------------------------- |
+|  `make clean`          | Apaga a última compilação realizada contida na pasta build e todos os arquivos ".gm" gerados na pasta dataset |
+|  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
+|  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
