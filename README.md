@@ -73,7 +73,7 @@ Com a interconexão de todas essas funções, o caminhamento do jogador por toda
 <img src="https://user-images.githubusercontent.com/127882640/233478607-25dfe6bc-de75-4af7-85ce-29de3e1c73c1.png" width="850px">
 </div>
 <p  align="center">
-Exemplo de caminhamento envolvendo duas matrizes quadradas (3x3). As setas verdes indicam as posições possíveis de serem acessadas, as vermelhas indicam as não possíveis, os círculos amarelos "P" indicam a localização dos portais. Junto a eles, existem as setas amarelas, as quais indicam para onde os portais levam o "hunter". Vale ressaltar que toda seta verde é dupla, ou seja, possível de ida e volta. Além disso, o caracter "P" dos portais pode assumir a identidade que qualquer caracter comum da matriz, seja um número natural de 0 a 9 (itens), seja uma parade (#), seja um perigo (*).
+Exemplo de caminhamento envolvendo duas matrizes quadradas (3x3). As setas verdes indicam as posições possíveis de serem acessadas, as vermelhas indicam as não possíveis, os círculos amarelos "P" indicam a localização dos portais. Junto a eles, existem as setas amarelas, as quais indicam para onde os portais levam o "hunter". Vale ressaltar que toda seta verde é dupla, ou seja, possível de ida e volta. Além disso, o caracter "P" dos portais pode assumir a identidade que qualquer caracter comum da matriz, seja um número natural de 0 a 9 (itens), seja uma parade (#), seja um perigo (*). Caso seja uma parede, aquele portal se torna inacessável.
 </p>
  
 # Casos Especiais
