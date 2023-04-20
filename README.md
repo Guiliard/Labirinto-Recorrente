@@ -33,27 +33,42 @@ Todos os elementos da matriz devem ser escaneados e transferidos para o código 
 # Solução Proposta
 <p>Para esse tipo de problema, foi proposto um código que contém 5 arquivos: Player.hpp, Player.cpp, Matriz.hpp, Matriz.cpp e Main.cpp.<br>
 
-- Player.hpp: Classe que possui a declaração dos atributos (características) e métodos (funções) do jogador. <br>
-- Player.cpp: Arquivo que retém a estruturação das funções envolvidas. <br>
-- Matriz.hpp: Classe que possui a declaração de variáveis e funções envolvidas no processo de caminhamento. <br>
-- Matriz.cpp: Arquivo que retém a estruturação das funções envolvidas. <br>
-- Main.cpp: Arquivo mais importante, responsável por chamar as funções contidas nas classes e realizar o processo de caminhamento.<br>
+- ```Player.hpp``` : Classe que possui a declaração dos atributos (características) e métodos (funções) do jogador. <br>
+- ```Player.cpp``` : Arquivo que retém a estruturação das funções envolvidas. <br>
+- ```Matriz.hpp``` : Classe que possui a declaração de variáveis e funções envolvidas no processo de caminhamento. <br>
+- ```Matriz.cpp``` : Arquivo que retém a estruturação das funções envolvidas. <br>
+- ```Main.cpp``` : Arquivo mais importante, responsável por chamar as funções contidas nas classes e realizar o processo de caminhamento.<br>
 
 Em primeiro lugar, destaca-se a lógica utilizada para "unificar" todas as matrizes como apenas um caminho. Imaginou-se que, em 3 posições pré-determinadas de qualquer matriz (linha 0 - coluna N , linha N - coluna 0 , linha N - coluna N), haveria-se um portal, o qual levaria o jogador para a posição inicial (linha 0 - coluna 0) da próxima matriz, sendo que os portais da última matriz dariam acesso à posição inicial da primeira. Com isso, tem-se a unificação do caminho. <br>
 Outro ponto importante é a forma que o carregamento das matrizes foi realizado. Tendo em vista que o número de matrizes não é determinado, carregar todas elas em memória seria uma alternativa de demandaria um enorme custo, ou seja, negativo para o processamento. Para contornar essa situação, carregamentos de matrizes em arquivos do tipo ".gm" foram utilizados, sendo que cada arquivo ".gm" armazenaria uma matriz. Com isso, obtém-se um baixo custo de memória e uma otimização do programa.    
 Dito esses assuntos, vale ressaltar as onze funções declaradas no arquivo Matriz.cpp, as quais tornam todo o processo possível:
 
-- AndarMundo: Função responsável por movimentar o "hunter", a qual analisa se a posição da matriz é acessável ou não. Caso seja acessável, ela fará o jogador se deslocar e, também, fará todos os procedimentos necessários após esse caminhamento, como pegar item, ganhar vida, perder vida, se teletransportar ou não fazer nada.  
-- AtualizarMundo: 
-- CheckPoint:
-- ComparaMundo:
-- ContaEspinhos:
-- CriaMundo:
-- CriaTrajetoria:
-- Leitura:
-- Movimento:
-- VerMundo:
-- VerTrajetoria:
+- ```AndarMundo``` : Função responsável por movimentar o "hunter", a qual analisa se a posição da matriz é acessável ou não. Caso seja acessável, ela fará o jogador se deslocar e, também, fará todos os procedimentos necessários após esse caminhamento, como pegar item, armazenar esse item na mochila do jogador, diminuir o total de itens que aquela posição possui, ganhar vida, perder vida, zerar a mochila, se teletransportar ou não fazer nada.  
+- ```AtualizarMundo``` : Função que possui como objetivo atualizar o arquivo que contém a matriz caminhada pelo jogador, deixado em evidência as casas percorridas por ele.
+- ```CheckPoint``` : Função responsável por registrar as informações finais sobre caminhamento realizado pelo "hunter", tais como:
+  * Total de vida
+  * Total de casas percorridas
+  * Total de itens consumidos
+  * Total de perigos enfrentados
+  * Total de casas inexploradas  
+- ```ComparaMundo``` : Função que possui como objetivo comparar a matriz original (antes do caminhamento) com a matriz alterada (depois do caminhamento), para que, assim, saiba-se com exatidão por onde o "hunter" passou.
+- ```ContaEspinhos``` : Função responsável por contar por quantos perigos (espinhos - *) diferentes o jogador acessou.
+- ```CriaMundo``` : Função que cria os arquivos do tipo ".gm", os quais serão operados ao longo do programa.
+- ```CriaTrajetoria``` : Função que cria um arquivo específico do tipo ".gm" que mostra, através de um marcador (x), todas as posições de todas as matrizes que "hunter" passou.
+- ```Leitura``` : Função responsável por ler um arquivo, seja ele do tipo ".data" ou ".gm" e carregá-lio em uma matriz.
+- ```Movimento``` : Função que tem como objetivo movimentar o jogador de forma randômica, ou seja, aleatória, sorteando umas das 8 possíveis direções cardeais, obedecendo a seguinte relação:
+  * 0 - Leste
+  * 1 - Sudeste
+  * 2 - Sul
+  * 3 - Sudoeste
+  * 4 - Oeste
+  * 5 - Noroeste
+  * 6 - Norte 
+  * 7 - Nordeste
+- ```VerMundo``` : Função responsável por mostrar todos os arquivos ".gm" que contém todas as matrizes alteradas (após o caminhamento).
+- ```VerTrajetoria``` : Função que mostra o arquivo ".gm" que possui todas as posições de todas as matrizes nas quais o "hunter" passou.
+
+Com a interconexão de todas essas funções, o caminhamento do jogador por todas as matrizes se torna possível e real.
 
 # Casos Especiais
 
