@@ -455,7 +455,9 @@ void Matriz :: AtualizarMundo(string **mat, short int *mundo)
 void Matriz ::AndarMundo(Player *hunter, string **mat, short int *linha, short int *coluna, short int *mundo, short int maislinha, short int maiscoluna)
 {
     short int converter = 0;
-    if (mat[*linha + maislinha][*coluna + maiscoluna] == "*")
+    if (mat[*linha + maislinha][*coluna + maiscoluna] == "#")
+        continue;
+    else if (mat[*linha + maislinha][*coluna + maiscoluna] == "*")
     {
         hunter->setVida(hunter->getVida() - 1);
         setPerigosenfrentados(getPerigosenfrentados()+1);
