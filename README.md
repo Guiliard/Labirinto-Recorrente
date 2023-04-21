@@ -56,7 +56,7 @@ Dito esses assuntos, vale ressaltar as onze funções declaradas no arquivo Matr
 - ```CriaMundo``` : Função que cria os arquivos do tipo ".gm", os quais serão operados ao longo do programa.
 - ```CriaTrajetoria``` : Função que cria um arquivo específico do tipo ".gm" que mostra, através de um marcador (x), todas as posições de todas as matrizes que "hunter" passou.
 - ```Leitura``` : Função responsável por ler um arquivo, seja ele do tipo ".data" ou ".gm" e carregá-lio em uma matriz.
-- ```Movimento``` : Função que tem como objetivo pedir para o usuário escolher a posição de início do jogador na primeira matriz, movimentá-lo de forma randômica, ou seja, aleatória, sorteando umas das 8 possíveis direções cardeais e, além disso, verificar se o código pode ser encerrado (caso o "hunter" perca todos os seus pontos de vida ou se todo o caminho que ele percorra não seja diferente de zero). Por fim, vale exibir a relação entre o sorteio randômico e as 8 direções cardeias:
+- ```Movimento``` : Função que tem como objetivo pedir para o usuário escolher a posição de início do jogador na primeira matriz, movimentá-lo de forma randômica, ou seja, aleatória, sorteando umas das 8 possíveis direções cardeais e, além disso, verificar se o código pode ser encerrado (caso o "hunter" perca todos os seus pontos de vida ou se todo o caminho que ele percorra não seja diferente de zero). Por fim, vale exibir a relação entre o sorteio randômico e as 8 direções cardeais:
   * 0 - Leste
   * 1 - Sudeste
   * 2 - Sul
@@ -104,7 +104,7 @@ O segundo caso é denominado "quarto fechado", que ocorre quando, na função ``
 <img src="https://user-images.githubusercontent.com/127882640/233633747-c6fcec12-468d-4f47-afa5-e30ec9d3ba86.png" width="420px"/>
 </div>
 <p  align="center">
-Exemplo de caminhamentos impossíveis. Em ambos os casos, o caracter "P" de portal assumi a identidade de uma parede (#).
+Exemplo de caminhamentos impossíveis. Em ambos os casos, o caracter "P" de portal assume a identidade de uma parede (#).
 </p>
 
 # Implementação
@@ -123,8 +123,7 @@ Leitura das matrizes e fornecimento da posição de início pelo usuário. <br> 
 <p  align="center">
 Função CheckPoint. <br> <br>
 </p>
-<img src="https://user-images.githubusercontent.com/127882640/233640087-165f4535-2a62-4454-8d73-8c59d30e5312.png" hspace="50px" width="177px">
-<img src="https://user-images.githubusercontent.com/127882640/233640196-1e2bb20e-66b3-43c9-9c43-0996e0b0393e.png" width="220px"> <br>
+<img src="https://user-images.githubusercontent.com/127882640/233714771-212fbf08-b521-4039-a822-dae28f4c56d9.png" width="750px"> <br>
 <p  align="center">
 Primeiro output (matrizes alteradas) e segundo output (trajetória do "hunter"). <br> <br>
 </p>
