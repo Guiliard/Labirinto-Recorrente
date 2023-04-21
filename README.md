@@ -56,7 +56,7 @@ Dito esses assuntos, vale ressaltar as onze funções declaradas no arquivo Matr
 - ```CriaMundo``` : Função que cria os arquivos do tipo ".gm", os quais serão operados ao longo do programa.
 - ```CriaTrajetoria``` : Função que cria um arquivo específico do tipo ".gm" que mostra, através de um marcador (x), todas as posições de todas as matrizes que "hunter" passou.
 - ```Leitura``` : Função responsável por ler um arquivo, seja ele do tipo ".data" ou ".gm" e carregá-lio em uma matriz.
-- ```Movimento``` : Função que tem como objetivo movimentar o jogador de forma randômica, ou seja, aleatória, sorteando umas das 8 possíveis direções cardeais, obedecendo a seguinte relação:
+- ```Movimento``` : Função que tem como objetivo pedir para o usuário escolher a posição de início do jogador na primeira matriz, movimentá-lo de forma randômica, ou seja, aleatória, sorteando umas das 8 possíveis direções cardeais e, além disso, verificar se o código pode ser encerrado (caso o "hunter" perca todos os seus pontos de vida ou se todo o caminho que ele percorra não seja diferente de zero). Por fim, vale exibir a relação entre o sorteio randômico e as 8 direções cardeias:
   * 0 - Leste
   * 1 - Sudeste
   * 2 - Sul
@@ -77,8 +77,58 @@ Exemplo de caminhamento envolvendo duas matrizes quadradas (3x3). As setas verde
 </p>
  
 # Casos Especiais
+Tendo em vista que o "hunter" não pode caminhar onde existem paredes, é impossível de, na função ```Movimento``` , o usuário digitar uma posição que seja parede (#). Caso isso ocorra, o programa informará ao usuário sobre o ocorrido e pedirá para que ele digite uma nova posição diferente de parede.
+<div align=center>
+<img src="https://user-images.githubusercontent.com/127882640/233627558-c73038a8-bd8a-4a6b-98af-51eff20b4c34.png" hspace="50px" width="420px"/>
+<img src="https://user-images.githubusercontent.com/127882640/233627635-b242f2b8-83e5-44d3-b6dd-0e6fc0ea32df.png" width="420px"/>
+</div>
+<p  align="center">
+Exemplo da primeira posição ser parede.
+</p>
+<br>
+Ademais, existe a possibilidade de, se o jogador entrar em um portal, a posição de chegada (linha 0 - coluna - 0) da próxima matriz seja uma parede (#). Caso isso ocorra, o portal transformará aquela parede em um baú de 4 itens, ou seja, transformará no número natural 4, sendo que esse novo caracter será operado normalmente pelo "hunter" obedecendo as regras do programa.
+<div align=center>
+<img src="https://user-images.githubusercontent.com/127882640/233629917-836b54f9-566f-4e9e-9d18-747839a4564e.png" hspace="50px" width="420px"/>
+<img src="https://user-images.githubusercontent.com/127882640/233629985-4aa8d018-3e9f-420f-a57c-4aadf71d894a.png" width="420px"/>
+</div>
+<p  align="center">
+Exemplo da transformação da parede em um baú.
+</p>
+
+# Casos Sem Tratamento
+
+Existem dois casos no programa que, se acontecerem, o código entra em loop infinito em não se encerra. O primeiro deles é se todas as posições de uma matriz for parede (#). Nesse caso, nenhuma posição da matriz é acessível pelo jogador, logo, o caminhamento se torna impossível.
+O segundo caso é denominado "quarto fechado", que ocorre quando, na função ```Movimento```, o usuário digita uma posição possível, mas, ao redor dela, só existem paredes, deixando o jogador preso em uma espécie de "quarto", o que também torna o caminhamento impossível.
+<div align=center>
+<img src="https://user-images.githubusercontent.com/127882640/233633727-3d084f38-1aa7-48cf-83a9-e18761b9dc70.png" hspace="50px" width="420px"/>
+<img src="https://user-images.githubusercontent.com/127882640/233633747-c6fcec12-468d-4f47-afa5-e30ec9d3ba86.png" width="420px"/>
+</div>
+<p  align="center">
+Exemplo de caminhamentos impossíveis. Em ambos os casos, o caracter "P" de portal assumi a identidade de uma parede (#).
+</p>
 
 # Implementação
+
+Considere duas matrizes (6x6) como teste do problema proposto:
+<div align=center>
+<img src="https://user-images.githubusercontent.com/127882640/233639465-12d78a9f-a5c7-4eeb-afc2-b7ce053c5302.png" width="200px">
+</div>
+O resultado esperado é:<br>
+<br><div align=center>
+<img src="https://user-images.githubusercontent.com/127882640/233639840-78887137-d6c1-4b5f-8203-7bb1931cb1e5.png" width="850px">
+<p  align="center">
+Leitura das matrizes e fornecimento da posição de início pelo usuário. <br> <br>
+</p>
+<img src="https://user-images.githubusercontent.com/127882640/233640429-6177638c-3593-442b-b4b4-be7d9138bb70.png" width="750px">
+<p  align="center">
+Função CheckPoint. <br> <br>
+</p>
+<img src="https://user-images.githubusercontent.com/127882640/233640087-165f4535-2a62-4454-8d73-8c59d30e5312.png" hspace="50px" width="177px">
+<img src="https://user-images.githubusercontent.com/127882640/233640196-1e2bb20e-66b3-43c9-9c43-0996e0b0393e.png" width="220px"> <br>
+<p  align="center">
+Primeiro output (matrizes alteradas) e segundo output (trajetória do "hunter"). <br> <br>
+</p>
+</div>
 
 # Conclusão 
 
