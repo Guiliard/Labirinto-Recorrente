@@ -132,6 +132,8 @@ Primeiro output (matrizes alteradas) e segundo output (trajetória do "hunter").
 
 # Conclusão 
 
+De forma geral, o programa, orientado à objeto, se mostra eficiente para resolver o caminhamento de matrizes de forma randômica. Seu custo computacional é diretamente proporcional ao tamanho da entrada, visto que um grande número de matrizes maiores demandará mais iterações e operações do que um pequeno número de matrizes menores. Por fim, afirma-se que o objetivo do trabalho foi cumprido com exelência, porém, o código é passivo de melhorias e otimizações. 
+
 # Compilação e Execução
 
 Um arquivo Makefile que realiza todo o procedimento de compilação e execução está disponível no código. Para utilizá-lo, siga as diretrizes de execução no terminal:
