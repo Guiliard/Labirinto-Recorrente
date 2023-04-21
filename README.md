@@ -86,7 +86,7 @@ Tendo em vista que o "hunter" não pode caminhar onde existem paredes, é imposs
 Exemplo da primeira posição ser parede.
 </p>
 <br>
-Ademais, existe a possibilidade de, se o jogador entrar em um portal, a posição de chegada (linha 0 - coluna - 0) da próxima matriz seja uma parede (#). Caso isso ocorra, o portal transformará aquela parede em um baú de 4 itens, ou seja, transformará no número natural 4, sendo que esse novo caracter será operado normalmente pelo "hunter" obedecendo as regras do programa.
+Ademais, existe a possibilidade de, se o jogador entrar em um portal, a posição de chegada (linha 0 - coluna - 0) da próxima matriz seja uma parede (#). Caso isso ocorra, o portal transformará aquela parede em um baú de 4 itens (número natural 4), sendo que esse novo caracter será operado normalmente pelo "hunter" obedecendo as regras do programa.
 <div align=center>
 <img src="https://user-images.githubusercontent.com/127882640/233629917-836b54f9-566f-4e9e-9d18-747839a4564e.png" hspace="50px" width="420px"/>
 <img src="https://user-images.githubusercontent.com/127882640/233629985-4aa8d018-3e9f-420f-a57c-4aadf71d894a.png" width="420px"/>
@@ -97,8 +97,8 @@ Exemplo da transformação da parede em um baú.
 
 # Casos Sem Tratamento
 
-Existem dois casos no programa que, se acontecerem, o código entra em loop infinito em não se encerra. O primeiro deles é se todas as posições de uma matriz for parede (#). Nesse caso, nenhuma posição da matriz é acessível pelo jogador, logo, o caminhamento se torna impossível.
-O segundo caso é denominado "quarto fechado", que ocorre quando, na função ```Movimento```, o usuário digita uma posição possível, mas, ao redor dela, só existem paredes, deixando o jogador preso em uma espécie de "quarto", o que também torna o caminhamento impossível.
+Existem dois casos no programa que, se acontecerem, o código entra em loop infinito e não se encerra. O primeiro deles é se todas as posições de uma matriz for parede (#). Nesse caso, nenhuma posição da matriz é acessível pelo jogador, logo, o caminhamento se torna impossível.
+O segundo caso é denominado "quarto fechado", que ocorre quando, na função ```Movimento``` , o usuário digita uma posição possível, mas, ao redor dela, só existem paredes, deixando o jogador preso em uma espécie de "quarto", o que também torna o caminhamento impossível.
 <div align=center>
 <img src="https://user-images.githubusercontent.com/127882640/233633727-3d084f38-1aa7-48cf-83a9-e18761b9dc70.png" hspace="50px" width="420px"/>
 <img src="https://user-images.githubusercontent.com/127882640/233633747-c6fcec12-468d-4f47-afa5-e30ec9d3ba86.png" width="420px"/>
