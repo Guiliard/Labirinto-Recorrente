@@ -455,15 +455,10 @@ void Matriz :: AtualizarMundo(string **mat, short int *mundo)
 void Matriz ::AndarMundo(Player *hunter, string **mat, short int *linha, short int *coluna, short int *mundo, short int maislinha, short int maiscoluna)
 {
     short int converter = 0;
-    if (mat[*linha + maislinha][*coluna + maiscoluna] == "#")
-    {
-        cout << "Parede encontrada! O jogador não irá se mover!\n";
-    }
-    else if (mat[*linha + maislinha][*coluna + maiscoluna] == "*")
+    if (mat[*linha + maislinha][*coluna + maiscoluna] == "*")
     {
         hunter->setVida(hunter->getVida() - 1);
         setPerigosenfrentados(getPerigosenfrentados()+1);
-        cout << "O jogador perdeu 1 de vida! Vida total:" << hunter->getVida() << "\n";
         *linha = *linha + maislinha;
         *coluna = *coluna + maiscoluna;
         Contaespinhos(linha, coluna, mundo);
@@ -482,27 +477,21 @@ void Matriz ::AndarMundo(Player *hunter, string **mat, short int *linha, short i
             tudozero=false;
             hunter->setMochila(hunter->getMochila() + 1);
             setItensconsumidos(getItensconsumidos()+1);
-            cout << "O jogador ganhou 1 item!\n";
             converter = converter - 1;
             mat[*linha][*coluna] = to_string(converter);
             if (hunter->getMochila() == 4 && hunter->getVida() < 10)
             {
                 hunter->setVida(hunter->getVida() + 1);
-                cout << "O jogador ganhou 1 de vida!\n";
                 hunter->setMochila(0);
             }
             else if (hunter->getMochila() == 4 && hunter->getVida() == 10)
                 hunter->setMochila(0);
         }
         else
-        {
-            cout << "Passou por 0!\n";
             setContapassos(getContapassos()+1);
-        }
     }
     if ((*linha == getTamanho() - 1 && *coluna == 0) || (*linha == getTamanho() - 1 && *coluna == getTamanho() - 1) || (*linha == 0 && *coluna == getTamanho() - 1)) // portal
     {
-        cout << "O jogador entrou em um portal!\n";
         *linha = 0;
         *coluna = 0;
         setContapassos(getContapassos()+1);
@@ -529,19 +518,15 @@ void Matriz ::AndarMundo(Player *hunter, string **mat, short int *linha, short i
         }
         if (mat[*linha][*coluna] == "#")
         {
-            cout << "Parede encontrada!\n";
-            cout << "Portal transformará a parede em um baú de 4 itens!\n";
             mat[*linha][*coluna] = "4";
             hunter->setMochila(hunter->getMochila() + 1);
             setItensconsumidos(getItensconsumidos()+1);
-            cout << "O jogador ganhou 1 item!\n";
             converter = stoi(mat[*linha][*coluna]);
             converter = converter - 1;
             mat[*linha][*coluna] = to_string(converter);
             if (hunter->getMochila() == 4 && hunter->getVida() < 10)
             {
                 hunter->setVida(hunter->getVida() + 1);
-                cout << "O jogador ganhou 1 de vida!\n";
                 hunter->setMochila(0);
             }
             else if (hunter->getMochila() == 4 && hunter->getVida() == 10)
@@ -551,7 +536,6 @@ void Matriz ::AndarMundo(Player *hunter, string **mat, short int *linha, short i
         {
             hunter->setVida(hunter->getVida() - 1);
             setPerigosenfrentados(getPerigosenfrentados()+1);
-            cout << "O jogador perdeu 1 de vida! Vida total:" << hunter->getVida() << "\n";
             Contaespinhos(linha, coluna, mundo);
             if (hunter->getVida() == 0)
                 AtualizarMundo(mat, mundo);
@@ -564,20 +548,16 @@ void Matriz ::AndarMundo(Player *hunter, string **mat, short int *linha, short i
                 tudozero=false;
                 hunter->setMochila(hunter->getMochila() + 1);
                 setItensconsumidos(getItensconsumidos()+1);
-                cout << "O jogador ganhou 1 item!\n";
                 converter = converter - 1;
                 mat[*linha][*coluna] = to_string(converter);
                 if (hunter->getMochila() == 4 && hunter->getVida() < 10)
                 {
                     hunter->setVida(hunter->getVida() + 1);
-                    cout << "O jogador ganhou 1 de vida!\n";
                     hunter->setMochila(0);
                 }
                 else if (hunter->getMochila() == 4 && hunter->getVida() == 10)
                     hunter->setMochila(0);
             }
-            else
-                cout << "Passou por 0!\n";
         }
     }
 }
