@@ -133,6 +133,21 @@ Primeiro output (matrizes alteradas) e segundo output (trajetória do "hunter").
 
 De forma geral, o programa, orientado à objeto, se mostra eficiente para resolver o caminhamento de matrizes de forma randômica. Seu custo computacional é diretamente proporcional ao tamanho da entrada, visto que um grande número de matrizes maiores demandará mais iterações e operações do que um pequeno número de matrizes menores. Por fim, afirma-se que o objetivo do trabalho foi cumprido com exelência, porém, o código é passivo de melhorias e otimizações, tais como aquelas discutidas na seção "Casos Sem Tratamento". 
 
+# Especificações do Dispositivo Utilizado
+
+|                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------- |
+|  `Processador`         -> Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz   1.50 GHz                                             |
+|  `RAM Instalada`       -> 8.0 GB (Utilizável: 7.8 GB)                                                                      |
+|  `Tipo de Sistema`     -> Sistema Operacional de 64 bits, processador baseado em x64                                       |
+|  `Sistema Operacional` -> Edição Windows 11 Home Single Language, versão 22H2                                              |
+
+
+<p> </p>
+
+<p> </p>
+
+
 # Compilação e Execução
 
 Um arquivo Makefile que realiza todo o procedimento de compilação e execução está disponível no código. Para utilizá-lo, siga as diretrizes de execução no terminal:
