@@ -168,6 +168,7 @@ void Matriz ::CriaMundo(string **mat, short int k)
     file.close();
     file2.close();
 }
+
 void Matriz :: CriaTrajetoria(string **mat)
 {
     short int k=0;
