@@ -135,12 +135,12 @@ De forma geral, o programa, orientado à objeto, se mostra eficiente para resolv
 
 # Especificações do Dispositivo Utilizado
 
-|                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------- |
-|  `Processador`         -> Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz   1.50 GHz                                             |
-|  `RAM Instalada`       -> 8.0 GB (Utilizável: 7.8 GB)                                                                      |
-|  `Tipo de Sistema`     -> Sistema Operacional de 64 bits, processador baseado em x64                                       |
-|  `Sistema Operacional` -> Edição Windows 11 Home Single Language, versão 22H2                                              |
+| Componentes            | Detalhes                                                                                         |
+| -----------------------| -----------------------------------------------------------------------------------------------  |
+|  `Processador`         | Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz   1.50 GHz                                             |
+|  `RAM Instalada`       | 8.0 GB (Utilizável: 7.8 GB)                                                                      |
+|  `Tipo de Sistema`     | Sistema Operacional de 64 bits, processador baseado em x64                                       |
+|  `Sistema Operacional` | Edição Windows 11 Home Single Language, versão 22H2                                              |
 
 
 <p> </p>
