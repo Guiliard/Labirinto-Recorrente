@@ -142,12 +142,6 @@ De forma geral, o programa, orientado à objeto, se mostra eficiente para resolv
 |  `Tipo de Sistema`     | Sistema Operacional de 64 bits, processador baseado em x64                                       |
 |  `Sistema Operacional` | Edição Windows 11 Home Single Language, versão 22H2                                              |
 
-
-<p> </p>
-
-<p> </p>
-
-
 # Compilação e Execução
 
 Um arquivo Makefile que realiza todo o procedimento de compilação e execução está disponível no código. Para utilizá-lo, siga as diretrizes de execução no terminal:
