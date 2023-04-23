@@ -505,7 +505,6 @@ void Matriz ::AndarMundo(Player *hunter, string **mat, short int *linha, short i
             mat[*linha][*coluna] = "4";
             hunter->setMochila(hunter->getMochila() + 1);
             setItensconsumidos(getItensconsumidos()+1);
-            cout << "O jogador ganhou 1 item!\n";
             converter = stoi(mat[*linha][*coluna]);
             converter = converter - 1;
             mat[*linha][*coluna] = to_string(converter);
