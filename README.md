@@ -97,7 +97,7 @@ Exemplo da transformação da parede em um baú.
 
 # Casos Sem Tratamento
 
-Existem dois casos no programa que, se acontecerem, o código entra em loop infinito e não se encerra. O primeiro deles é se todas as posições de uma matriz for parede (#). Nesse caso, nenhuma posição da matriz é acessível pelo jogador, logo, o caminhamento se torna impossível.
+Existem dois casos no programa que, se acontecerem, o código entra em loop infinito e não se encerra. O primeiro deles é se todas as posições de uma matriz forem parede (#). Nesse caso, nenhuma posição da matriz é acessível pelo jogador, logo, o caminhamento se torna impossível.
 O segundo caso é denominado "quarto fechado", que ocorre quando, na função ```Movimento``` , o usuário digita uma posição possível, mas, ao redor dela, só existem paredes, deixando o jogador preso em uma espécie de "quarto", o que também torna o caminhamento impossível.
 <div align=center>
 <img src="https://user-images.githubusercontent.com/127882640/233633727-3d084f38-1aa7-48cf-83a9-e18761b9dc70.png" hspace="50px" width="420px"/>
